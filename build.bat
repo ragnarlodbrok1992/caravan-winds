@@ -11,6 +11,8 @@ echo %raylib_link_dir%
 
 REM /Wall - disabling for now @TODO: make warning sensible
 %compiler_dir% /EHsc /Zi^
+ /DEBUG:FULL^
+ /INCREMENTAL:NO^
  /Fe:"caravan-winds"^
  src/main.cpp^
  /I%raylib_include_dir%^
