@@ -7,9 +7,13 @@ SET raylib_include_dir="D:\libraries\%RAYLIB_VERSION%\include"
 SET raylib_link_dir="D:\libraries\%RAYLIB_VERSION%\lib"
 
 echo %raylib_include_dir%
+echo %raylib_link_dir%
 
+REM /Wall - disabling for now @TODO: make warning sensible
 %compiler_dir% /EHsc /Zi^
+ /Fe:"caravan-winds"^
  src/main.cpp^
  /I%raylib_include_dir%^
- /LIBPATH:%raylib_link_dir%
+ /link /LIBPATH:%raylib_link_dir% /NODEFAULTLIB:libcmt^
+ raylib.lib gdi32.lib User32.lib Shell32.lib winmm.lib kernel32.lib
 
