@@ -1,0 +1,4 @@
+- [ ]: Create window in RayLib.
+- [ ]: Render cube.
+- [ ]: Create a movable camera.
+
